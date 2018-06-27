@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+* {
+/*	background: #ADD8E6;*/
+	padding:0;
+	margin:0;
+	cursor: default;
+}
+
+
+html,body{
+	height: 100%;
+}
+
+body{
+	background: #1D1F20;
+	--def: #96B7C4;     
+    --inv: #fff;
+}
+
+h1{
+	font-family: Ubuntu;
+	text-align: center;
+	color: white;
+	margin-bottom: 70px;
+	margin-top: 40px;
+}
+
+
+#main{
+	min-height: 600px;
+	width: 600px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center; 
+}
+
+.block{
+	/*background: #1D1F20;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 150px;
+	width: 150px;
+	border: 0.5px solid black;
+	font-family: Gloria Hallelujah;
+	font-size: 150px;
+	color: white;
+}
+
+.gradient-border {
+  --borderWidth: 5px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.modal-container{
+	color: white;
+	width: 50%;
+	height: 30vh;
+	left:50%; 
+	margin-left:-25%;
+	top:50%; 
+	margin-top:-10%;
+	display: none;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	background-image: linear-gradient(-25deg, #616161 0%, #96B7C4 100%);
+	color: white;
+	font-family: Ubuntu;
+}
+
+.modal-container>p{
+	font-size:20px;
+	margin: 20px 10px 20px 10px;
+}
+
+
+.btn {      
+    position: relative; 
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.4rem;
+    color: var(--inv);
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);  
+    cursor: pointer;
+    user-select: none;
+}.from-bottom:before, 
+.from-bottom:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.from-bottom:before {
+    top: 0; 
+    border: 1px solid var(--inv);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.from-bottom:after {
+    bottom: 0;
+    height: 0;
+}
+
+.from-bottom:hover:before,
+.from-bottom:hover:after {
+    height: 100%;
+}
+
+
+.container{
+  height: 10%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+  
+.text{
+  font-weight: 100;
+  font-size: 28px;
+  color: #FAFAFA;
+  z-index: 6;
+  }
+
+.dud{
+	color: #757575;
+}
